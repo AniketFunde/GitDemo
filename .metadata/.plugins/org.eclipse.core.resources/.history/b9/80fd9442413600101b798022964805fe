@@ -1,0 +1,52 @@
+package rahulshettyacademy.stepdefination;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import rahulshettyacademy.pageObjects.LandingPage;
+import rahulshettyacademy.pageObjects.ProductCatalog;
+import rahulshettyacademy.pageObjects.ProductPayment;
+import rahulshettyacademy.testcomponent.BaseTest;
+
+public class StepDefinationImplementation  extends BaseTest{
+
+		public LandingPage landingPage;
+		public ProductCatalog productCatalog;
+		
+		@Given("I landed on Ecommerce page")
+		public void I_landed_on_Ecommerce_page() throws IOException
+		{
+			landingPage = launchApplication();
+		}
+		
+		@Given("^logged in with username (.+) and password (.+)$")
+		public void logged_in_with_username_and_password (String username, String password) 
+		{
+			 productCatalog = landingPage.loginApplication(username, password);
+		}
+		
+		//When I add product <productName> to cart
+		@When("^I add product (.+) to cart$")
+		public void I_add_product_to_cart(String productName) throws InterruptedException
+		{
+			List <WebElement> products = productCatalog.getProductList();
+			productCatalog.addProductToCart(productName);
+		}
+		
+		//And checkout <productName> and submit the order
+		
+		@When("^checkout (.+) and submit the order$")
+		public void checkout_and_submit_the_order(String productName)
+		{
+			boolean match = productCatalog.verifyCartProduct(productName);
+			Assert.assertTrue(match);
+			ProductPayment productPayment = productCatalog.goToPayment();
+			productPayment.selectCountryName("india");
+			productPayment.checkoutAndConfirm();
+		}
+}

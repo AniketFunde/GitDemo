@@ -1,0 +1,19 @@
+
+@tag
+Feature: Purchase the order from Ecommerce website
+  I want to use this template for my feature file
+
+ Background:
+ Given I landed on Ecommerce page 
+
+  @tag2
+  Scenario Outline: Possitive Test of submitting the order
+    Given logged in with username <name> and password <password>
+    When I add product <productName> to cart
+    And checkout <productName> and submit the order
+    Then "Thankyou for the order." messege is displayed on confirmation page
+
+    Examples: 
+      | name                  | password      | productName  |
+      | aniketfunde@gmail.com |     Aniket@20 | ADIDAS ORIGINAL |
+      | aniketfunde@gmail.com |     Aniket@20| ZARA COAT 3    |

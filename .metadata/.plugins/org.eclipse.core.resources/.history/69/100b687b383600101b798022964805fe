@@ -1,0 +1,18 @@
+package rahulshettyacademy.stepdefination;
+
+import java.io.IOException;
+
+import io.cucumber.java.en.Given;
+import rahulshettyacademy.pageObjects.LandingPage;
+import rahulshettyacademy.testcomponent.BaseTest;
+
+public class StepDefinationImplementation  extends BaseTest{
+
+		public LandingPage landingPage;
+		
+		@Given("I landed on Ecommerce page ")
+		public void I_landed_on_Ecommerce_page() throws IOException
+		{
+			landingPage = launchApplication();
+		}
+}

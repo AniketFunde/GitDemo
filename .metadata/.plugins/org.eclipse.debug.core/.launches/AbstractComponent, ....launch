@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SeleniumFrameworkDesign"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+    <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS">
+        <mapEntry key="rahulshettyacademy.AbstractComponent" value="goToOrdersPage;waitForElementToAppear;waitForWebElementToAppear;waitForElementToDisappear;AbstractComponent"/>
+        <mapEntry key="rahulshettyacademy.data.DataReader" value="getJsonDataToMap"/>
+        <mapEntry key="rahulshettyacademy.pageObjects.LandingPage" value="loginApplication;getErrorMsg;LandingPage;goTo"/>
+        <mapEntry key="rahulshettyacademy.pageObjects.OrdersPage" value="OrdersPage;verifyProductDisplay"/>
+        <mapEntry key="rahulshettyacademy.pageObjects.ProductCatalog" value="getProductByName;ProductCatalog;getProductList;goToPayment;addProductToCart;verifyCartProduct"/>
+        <mapEntry key="rahulshettyacademy.pageObjects.ProductPayment" value="ProductPayment;selectCountryName;checkoutAndConfirm"/>
+        <mapEntry key="rahulshettyacademy.testcomponent.BaseTest" value="initializeDriver;launchApplication;getJsonDataToMap"/>
+        <mapEntry key="rahulshettyacademy.tests.ErrorValidationsTest" value="ErrorValidationsTest"/>
+        <mapEntry key="rahulshettyacademy.tests.SubmitOrderTest" value="submitOrder;getData;ordersHistoryTest"/>
+    </mapAttribute>
+    <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+        <listEntry value="rahulshettyacademy.data.DataReader"/>
+        <listEntry value="rahulshettyacademy.tests.SubmitOrderTest"/>
+        <listEntry value="rahulshettyacademy.pageObjects.LandingPage"/>
+        <listEntry value="rahulshettyacademy.tests.ErrorValidationsTest"/>
+        <listEntry value="rahulshettyacademy.AbstractComponent"/>
+        <listEntry value="rahulshettyacademy.pageObjects.OrdersPage"/>
+        <listEntry value="rahulshettyacademy.pageObjects.ProductCatalog"/>
+        <listEntry value="rahulshettyacademy.testcomponent.BaseTest"/>
+        <listEntry value="rahulshettyacademy.pageObjects.ProductPayment"/>
+        <listEntry value="rahulshettyacademy.tests.StandAloneTestCopy"/>
+    </listAttribute>
+    <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+    <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+    <stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+    <intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>
