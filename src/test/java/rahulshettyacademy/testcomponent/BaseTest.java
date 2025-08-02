@@ -25,7 +25,7 @@ public class BaseTest {
 	public WebDriver initializeDriver() throws IOException
 	{
 		
-		
+		// Hi cchanges from Person 2
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream("C:\\Users\\anike\\OneDrive\\Documents\\Selenium\\SeleniumFrameworkDesign\\src\\main\\java\\rahulshettyacademy\\resources\\GlobalData.properties");
 		prop.load(fis);
